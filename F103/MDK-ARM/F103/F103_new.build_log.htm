@@ -1,0 +1,125 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.33.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Dung Dam Manh, HaUI, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.33.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.33.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.8.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+C:\tai lieu\DACN-20241031T092648Z-001\DACN\F103_DACN\F103\MDK-ARM\F103.uvprojx
+Project File Date:  11/03/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'F103'
+
+FCARM uses the following Files via command file '.\Auto_FcArm_Cmd.inp':
+..\DHT11\dht11.c,
+..\DHT11\dht11.h 
+TO test.asm RTE NOPRINT
+custom translating @.\Auto_FcArm_Cmd.inp...
+Custom: C:\Keil_v5\ARM\Bin\FCARM.exe @.\Auto_FcArm_Cmd.inp
+FCARM FILE CONVERTER V2.58
+Completed 2 File(s), Ratio 100%
+assembling startup_stm32f103xb.s...
+compiling stm32f1xx_hal_cortex.c...
+compiling stm32f1xx_hal_pwr.c...
+compiling stm32f1xx_it.c...
+compiling stm32f1xx_hal_exti.c...
+compiling stm32f1xx_hal_msp.c...
+compiling stm32f1xx_hal_flash_ex.c...
+compiling stm32f1xx_hal.c...
+compiling test.asm...
+Error: C4065E: type of input file 'test.asm' unknown
+compiling stm32f1xx_hal_dma.c...
+compiling stm32f1xx_hal_rcc_ex.c...
+compiling stm32f1xx_hal_gpio_ex.c...
+compiling stm32f1xx_hal_gpio.c...
+compiling stm32f1xx_hal_flash.c...
+compiling main.c...
+../Core/Src/main.c(90): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(LAT_GPIO_Port, LAT_Pin,0);
+../Core/Src/main.c(93): warning:  #188-D: enumerated type mixed with another type
+  		if(pos&0x80) HAL_GPIO_WritePin(DATA_GPIO_Port, DATA_Pin,1);
+../Core/Src/main.c(94): warning:  #188-D: enumerated type mixed with another type
+  		else HAL_GPIO_WritePin(DATA_GPIO_Port, DATA_Pin,0);
+../Core/Src/main.c(95): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(CLK_GPIO_Port, CLK_Pin,1);
+../Core/Src/main.c(96): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(CLK_GPIO_Port, CLK_Pin,0);
+../Core/Src/main.c(100): warning:  #188-D: enumerated type mixed with another type
+  		if(code&0x80) HAL_GPIO_WritePin(DATA_GPIO_Port, DATA_Pin,1);
+../Core/Src/main.c(101): warning:  #188-D: enumerated type mixed with another type
+  		else HAL_GPIO_WritePin(DATA_GPIO_Port, DATA_Pin,0);
+../Core/Src/main.c(102): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(CLK_GPIO_Port, CLK_Pin,1);
+../Core/Src/main.c(103): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(CLK_GPIO_Port, CLK_Pin,0);
+../Core/Src/main.c(106): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(LAT_GPIO_Port, LAT_Pin,1);
+../Core/Src/main.c(300): warning:  #188-D: enumerated type mixed with another type
+  		while(HAL_GPIO_ReadPin(K1_GPIO_Port,K1_Pin) == 0) HAL_GPIO_WritePin(BUZZER_GPIO_Port,BUZZER_Pin,1);
+../Core/Src/main.c(301): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(BUZZER_GPIO_Port,BUZZER_Pin,0);
+../Core/Src/main.c(310): warning:  #188-D: enumerated type mixed with another type
+  		while(HAL_GPIO_ReadPin(K2_GPIO_Port,K2_Pin) == 0)	HAL_GPIO_WritePin(BUZZER_GPIO_Port,BUZZER_Pin,1);
+../Core/Src/main.c(311): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(BUZZER_GPIO_Port,BUZZER_Pin,0);
+../Core/Src/main.c(320): warning:  #188-D: enumerated type mixed with another type
+  		while(HAL_GPIO_ReadPin(K3_GPIO_Port,K3_Pin) == 0) HAL_GPIO_WritePin(BUZZER_GPIO_Port,BUZZER_Pin,1);
+../Core/Src/main.c(321): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(BUZZER_GPIO_Port,BUZZER_Pin,0);
+../Core/Src/main.c(328): warning:  #188-D: enumerated type mixed with another type
+  	if(HAL_GPIO_ReadPin(SQW_GPIO_Port,SQW_Pin) == 1) HAL_GPIO_WritePin(BUZZER_GPIO_Port,BUZZER_Pin,1);
+../Core/Src/main.c(329): warning:  #188-D: enumerated type mixed with another type
+  	else HAL_GPIO_WritePin(BUZZER_GPIO_Port,BUZZER_Pin,0);
+../Core/Src/main.c: 18 warnings, 0 errors
+compiling stm32f1xx_hal_rcc.c...
+compiling stm32f1xx_hal_i2c.c...
+compiling system_stm32f1xx.c...
+compiling stm32f1xx_hal_tim_ex.c...
+compiling stm32f1xx_hal_tim.c...
+".\F103\F103_new.axf" - 1 Error(s), 18 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_F103
+  C:\Users\PC Thuan Tuong\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\PC Thuan Tuong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+      Include file:  CMSIS\Core\Include\tz_context.h
+Target not created.
+Build Time Elapsed:  00:00:09
+</pre>
+</body>
+</html>
