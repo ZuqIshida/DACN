@@ -374,13 +374,30 @@ void Show_out(){
 void Switch_Status(uint8_t *Value, uint8_t Max, bool *External){
 	if(HAL_GPIO_ReadPin(K1_GPIO_Port,K1_Pin) == 0){
 		HAL_Delay(20);
-		while(HAL_GPIO_ReadPin(K1_GPIO_Port,K1_Pin) == 0) HAL_GPIO_WritePin(BUZZER_GPIO_Port,BUZZER_Pin,1);
+		uint32_t Time_check = HAL_GetTick();
+		uint32_t Time_push;
+		while(HAL_GPIO_ReadPin(K1_GPIO_Port,K1_Pin) == 0){
+			HAL_GPIO_WritePin(BUZZER_GPIO_Port,BUZZER_Pin,1);
+			Time_push = HAL_GetTick() - Time_check;
+		}
 		HAL_GPIO_WritePin(BUZZER_GPIO_Port,BUZZER_Pin,0);
 		if(*External == true) *External = false;
 		else{
-			if (*Value < Max) (*Value)++;
-			else if(*Value == Max) {
-				*Value = 0;	
+			if(Time_push > 500 && Time_push < 1500){
+				if(*Value == 0) HAL_Delay(500);
+				else {
+					(*Value)--;
+					HAL_Delay(200);
+				}
+			}
+			else if(Time_push >= 1500){
+				*Value = Max;
+			}
+			else{
+				if (*Value < Max) (*Value)++;
+				else if(*Value == Max) {
+					*Value = 0;	
+				}
 			}
 		}
 	}

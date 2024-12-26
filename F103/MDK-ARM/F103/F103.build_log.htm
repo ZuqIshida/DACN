@@ -27,7 +27,66 @@ Project File Date:  11/10/2024
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'F103'
-".\F103\F103.axf" - 0 Error(s), 0 Warning(s).
+compiling main.c...
+../Core/Src/main.c(109): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(LAT_GPIO_Port, LAT_Pin,0);
+../Core/Src/main.c(112): warning:  #188-D: enumerated type mixed with another type
+  		if(pos&0x80) HAL_GPIO_WritePin(DATA_GPIO_Port, DATA_Pin,1);
+../Core/Src/main.c(113): warning:  #188-D: enumerated type mixed with another type
+  		else HAL_GPIO_WritePin(DATA_GPIO_Port, DATA_Pin,0);
+../Core/Src/main.c(114): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(CLK_GPIO_Port, CLK_Pin,1);
+../Core/Src/main.c(115): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(CLK_GPIO_Port, CLK_Pin,0);
+../Core/Src/main.c(119): warning:  #188-D: enumerated type mixed with another type
+  		if(code&0x80) HAL_GPIO_WritePin(DATA_GPIO_Port, DATA_Pin,1);
+../Core/Src/main.c(120): warning:  #188-D: enumerated type mixed with another type
+  		else HAL_GPIO_WritePin(DATA_GPIO_Port, DATA_Pin,0);
+../Core/Src/main.c(121): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(CLK_GPIO_Port, CLK_Pin,1);
+../Core/Src/main.c(122): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(CLK_GPIO_Port, CLK_Pin,0);
+../Core/Src/main.c(125): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(LAT_GPIO_Port, LAT_Pin,1);
+../Core/Src/main.c(251): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(STATE_1_GPIO_Port, STATE_1_Pin, 1);
+../Core/Src/main.c(252): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(STATE_2_GPIO_Port, STATE_2_Pin, 1);
+../Core/Src/main.c(279): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(STATE_1_GPIO_Port, STATE_1_Pin, 1);
+../Core/Src/main.c(280): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(STATE_2_GPIO_Port, STATE_2_Pin, 0);
+../Core/Src/main.c(294): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(STATE_1_GPIO_Port, STATE_1_Pin, 0);
+../Core/Src/main.c(295): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(STATE_2_GPIO_Port, STATE_2_Pin, 1);
+../Core/Src/main.c(315): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(STATE_1_GPIO_Port, STATE_1_Pin, 0);
+../Core/Src/main.c(316): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(STATE_2_GPIO_Port, STATE_2_Pin, 0);
+../Core/Src/main.c(380): warning:  #188-D: enumerated type mixed with another type
+  			HAL_GPIO_WritePin(BUZZER_GPIO_Port,BUZZER_Pin,1);
+../Core/Src/main.c(383): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(BUZZER_GPIO_Port,BUZZER_Pin,0);
+../Core/Src/main.c(409): warning:  #188-D: enumerated type mixed with another type
+  		while(HAL_GPIO_ReadPin(K2_GPIO_Port,K2_Pin) == 0)	HAL_GPIO_WritePin(BUZZER_GPIO_Port,BUZZER_Pin,1);
+../Core/Src/main.c(410): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(BUZZER_GPIO_Port,BUZZER_Pin,0);
+../Core/Src/main.c(419): warning:  #188-D: enumerated type mixed with another type
+  		while(HAL_GPIO_ReadPin(K3_GPIO_Port,K3_Pin) == 0) HAL_GPIO_WritePin(BUZZER_GPIO_Port,BUZZER_Pin,1);
+../Core/Src/main.c(420): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(BUZZER_GPIO_Port,BUZZER_Pin,0);
+../Core/Src/main.c(428): warning:  #188-D: enumerated type mixed with another type
+  		if(HAL_GPIO_ReadPin(SQW_GPIO_Port,SQW_Pin) == 1) HAL_GPIO_WritePin(BUZZER_GPIO_Port,BUZZER_Pin,1);
+../Core/Src/main.c(429): warning:  #188-D: enumerated type mixed with another type
+  		else HAL_GPIO_WritePin(BUZZER_GPIO_Port,BUZZER_Pin,0);
+../Core/Src/main.c(431): warning:  #188-D: enumerated type mixed with another type
+  	else HAL_GPIO_WritePin(BUZZER_GPIO_Port,BUZZER_Pin,0);
+../Core/Src/main.c: 27 warnings, 0 errors
+linking...
+Program Size: Code=13184 RO-data=312 RW-data=88 ZI-data=1880  
+FromELF: creating hex file...
+".\F103\F103.axf" - 0 Error(s), 27 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -51,7 +110,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:5.4.0
       Include file:  CMSIS\Core\Include\tz_context.h
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>
